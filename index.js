@@ -44,7 +44,7 @@ const createTeam = () => {
     inquirer
         .prompt(questions)
         .then((answer1) => {
-            console.log(answer1.name);
+
             inquirer
                 .prompt([
                     {
@@ -78,11 +78,11 @@ const createTeam = () => {
                         TeamArray.push(manager);
                     }
                     if (answer1.role === "Engineer") {
-                        const engineer = new Manager(answer1.name, answer1.id, answer1.email, answer2.github);
+                        const engineer = new Engineer(answer1.name, answer1.id, answer1.email, answer2.github);
                         TeamArray.push(engineer);
                     }
                     if (answer1.role === "Intern") {
-                        const intern = new Manager(answer1.name, answer1.id, answer1.email, answer2.school);
+                        const intern = new Intern(answer1.name, answer1.id, answer1.email, answer2.schoolName);
                         TeamArray.push(intern);
                     }
                     if (answer2.addMember) {
@@ -108,7 +108,7 @@ const createTeam = () => {
 };
 
 function generateHtml() {
-    console.log("new guy", TeamArray)
+
     fs.writeFileSync(
         "./output/index.html",
         generateTeam(TeamArray),
