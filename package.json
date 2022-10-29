@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Vidhi0307/TeamProfileGenerator/issues"
   },
-  "homepage": "https://github.com/Vidhi0307/TeamProfileGenerator#readme"
+  "homepage": "https://github.com/Vidhi0307/TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
 }
