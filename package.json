@@ -22,5 +22,8 @@
   "homepage": "https://github.com/Vidhi0307/TeamProfileGenerator#readme",
   "dependencies": {
     "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.2.2"
   }
 }
